@@ -10,7 +10,7 @@ public class Permission {
 
     @Id
     private String id;
-    private String ObjectType;
+    private String objectType;
     private Integer version;
     private String acronym;
     private List<String> exclusiveDisjunction;
@@ -22,12 +22,16 @@ public class Permission {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getObjectType() {
-        return ObjectType;
+        return objectType;
     }
 
     public void setObjectType(String objectType) {
-        ObjectType = objectType;
+        this.objectType = objectType;
     }
 
     public Integer getVersion() {
