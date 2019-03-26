@@ -1,8 +1,8 @@
-package org.ccem.otus.api.spring.services.impl;
+package org.ccem.otus.api.spring.permission.services.impl;
 
-import org.ccem.otus.api.spring.documents.Permission;
-import org.ccem.otus.api.spring.repositories.PermissionRepository;
-import org.ccem.otus.api.spring.services.PermissionService;
+import org.ccem.otus.api.spring.permission.models.Permission;
+import org.ccem.otus.api.spring.permission.repositories.PermissionRepository;
+import org.ccem.otus.api.spring.permission.services.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

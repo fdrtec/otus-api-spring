@@ -1,6 +1,6 @@
-package org.ccem.otus.api.spring.services;
+package org.ccem.otus.api.spring.permission.services;
 
-import org.ccem.otus.api.spring.documents.Permission;
+import org.ccem.otus.api.spring.permission.models.Permission;
 
 import java.util.List;
 import java.util.Optional;
