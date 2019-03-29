@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fdrtec/otus-api-spring.svg?branch=master)](https://travis-ci.org/fdrtec/otus-api-spring)
+
 # otus-api-spring
 
 Projeto para apresentar o framework SpringBoot para o time de desenvolvimento do Otus Solutions.
