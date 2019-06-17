@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@Document
+@Document(collection = "activity_permission")
 public class Permission {
 
     @Id
