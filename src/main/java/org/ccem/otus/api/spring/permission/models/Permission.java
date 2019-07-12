@@ -2,6 +2,7 @@ package org.ccem.otus.api.spring.permission.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -13,12 +14,15 @@ public class Permission {
     @Id
     private String id;
 
+    @Field("objectType")
     @NotEmpty(message = "ObjectType can not be empty")
     private String objectType;
 
+    @Field("version")
     @NotNull(message = "Value can not be null")
     private Integer version;
 
+    @Field("acronym")
     @NotEmpty(message = "acronym can not be empty")
     private String acronym;
 

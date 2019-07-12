@@ -17,4 +17,7 @@ public interface PermissionService {
 
     void delete(String id);
 
+    Permission updateVersion(String id, Integer version);
+
+    Permission aggregate(String id, Integer version);
 }

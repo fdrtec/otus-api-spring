@@ -50,7 +50,6 @@ public class PermissionController {
             return ResponseEntity.badRequest().body(new Response<Permission>(errors));
         }
 
-        permission.setId(id);
         return ResponseEntity.ok(new Response<Permission>(this.permissionService.update(permission)));
     }
 
@@ -59,6 +58,33 @@ public class PermissionController {
         this.permissionService.delete(id);
         return ResponseEntity.ok(new Response<Integer>(1));
 
+    }
+
+    @PutMapping(path = "/{id}/{version}")
+    public ResponseEntity<Response<Permission>> updateVersion(@Valid @PathVariable(name = "id") String id,
+                                                              @Valid @PathVariable(name = "version") Integer version,
+                                                              BindingResult result){
+        if(result.hasErrors()){
+            List<String> errors = new ArrayList<>();
+            result.getAllErrors().forEach(error -> errors.add(error.getDefaultMessage()));
+            return ResponseEntity.badRequest().body(new Response<Permission>(errors));
+        }
+
+        return ResponseEntity.ok(new Response<Permission>(this.permissionService.updateVersion(id, version)));
+    }
+
+
+    @GetMapping(path = "/{id}/{version}")
+    public ResponseEntity<Response<Permission>> aggregate(@Valid @PathVariable(name = "id") String id,
+                                                              @Valid @PathVariable(name = "version") Integer version,
+                                                              BindingResult result){
+        if(result.hasErrors()){
+            List<String> errors = new ArrayList<>();
+            result.getAllErrors().forEach(error -> errors.add(error.getDefaultMessage()));
+            return ResponseEntity.badRequest().body(new Response<Permission>(errors));
+        }
+
+        return ResponseEntity.ok(new Response<Permission>(this.permissionService.aggregate(id, version)));
     }
 
 
